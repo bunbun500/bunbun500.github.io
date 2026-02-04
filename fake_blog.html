@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Starlight Archives</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* HERO IMAGE */
+.hero-banner {
+    width: 100%;
+    height: 260px;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/736819dd-ad3a-4637-a04f-af0f46da1f0a/d7lv2pi-7967f8f0-b1af-44a4-9f68-fda1bf301719.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83MzY4MTlkZC1hZDNhLTQ2MzctYTA0Zi1hZjBmNDZkYTFmMGEvZDdsdjJwaS03OTY3ZjhmMC1iMWFmLTQ0YTQtOWY2OC1mZGExYmYzMDE3MTkuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ppHYrftJVx-VCW3ISX58asH0h-IKBFeL0Cijr8iFwnU");
+    background-size: cover;
+    background-position: center;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #6a5acd, #ffb6c1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 26px;
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENT */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1.4em;
+}
+
+.blog-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.blog-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+/* STAR FIELD */
+.star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    background: radial-gradient(circle, white, rgba(255,255,255,0.25));
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255,255,255,0.9);
+    opacity: 0;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero-banner"></div>
+
+<div class="star-container" id="starContainer"></div>
+
+<header id="mainHeader">
+    <div class="logo">
+        <h1>Starlight Archives</h1>
+    </div>
+
+    <nav>
+        <a onclick="confettiClick()">Home</a>
+        <a onclick="confettiClick()">Essays</a>
+        <a onclick="confettiClick()">Equestria News</a>
+        <a onclick="confettiClick()">About Me</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>Darth Vader Vs Nightmare Moon: Symbols of Darkness</h2>
+    <p><em>By Tiffany</em></p>
+
+    <img class="blog-image" src="https://i.imgur.com/vVJPJJX.jpeg">
+
+    <p>A comparison between Anakin Skywalker and Princess Luna.</p>
+
+    <p>
+      Both Anakin Skywalker and Princess Luna fall due to loneliness, not ambition. Their transformation to the dark side is driven not by power, but by emotional vulnerability. Each feels underappreciated, unseen, and fears losing what they love. They are consumed not by evil, but by pain.
+    </p>
+
+    <p>
+      Luna’s pain came from living in her sister’s shadow for centuries. Celestia would be celebrated for raising the sun while Luna raises the moon in silence. Her sense of invisibility becomes resentment, which leads to obsession. She represents not rebellion, but imbalance. By attempting to create an eternal night, she is seeking to discard the natural harmony between night and day. Similarly, Anakin’s transformation into the dark side disrupts the balance of the Force. His fear-driven choice allows the dark side to plunge the galaxy into tyranny. Both figures, trying to control their pain, instead create chaos.
+    </p>
+
+    <p>
+      Luna and Anakin both begin as heroic figures. They were deeply compassionate and loyal, yet become the villains they once opposed. Ironically, their downfalls only deepen their loneliness. Nightmare Moon becomes isolated for 1,000 years, and Darth Vader is trapped in armor and emotional detachment. Their suffering becomes a self-perpetuating cycle of loneliness.
+    </p>
+
+    <p>
+      Yet their stories are similar when it comes to redemption. Princess Luna is allowed the chance to heal. However, she does not immediately accept forgiveness. Her journey was not just about being redeemed by others, but about learning to forgive herself. Redemption is a journey — an ongoing process of growth, accountability, and healing.
+    </p>
+
+    <p>
+      In contrast, Anakin’s redemption only comes in death. His final act of compassion, saving his son, allows him to restore his identity but does not offer him the chance to reflect on his actions or heal. The galaxy remains scarred by his actions, and his redemption comes tragically late. Where Luna’s redemption is restorative, Anakin’s is sacrificial.
+    </p>
+
+    <p>
+      Both characters are driven by love, yet both have a disordered view of it. Luna believes love should be manifest in admiration and reverence. Anakin equates love with possession and control. In both cases, love becomes something to be grasped rather than shared.
+    </p>
+
+    <p>
+      Still, love is what brings them back. Luna is redeemed through her sister’s forgiveness and the support of her community. Anakin is redeemed through the love of his son.
+    </p>
+
+</div>
+
+<footer>
+    ✦ Magic is in the Night ✦
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+const starContainer = document.getElementById("starContainer");
+const header = document.getElementById("mainHeader");
+
+function createStars() {
+    const starCount = 70;
+    const headerHeight = header.offsetHeight + document.querySelector('.hero-banner').offsetHeight;
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+
+        const size = Math.random() * 3 + 1;
+        const left = Math.random() * 100;
+        const duration = Math.random() * 6 + 5;
+        const delay = Math.random() * 8;
+
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.left = left + "%";
+        star.style.top = headerHeight + "px";
+        star.style.animationDuration = duration + "s";
+        star.style.animationDelay = delay + "s";
+
+        starContainer.appendChild(star);
+    }
+}
+
+function confettiClick() {
+    confetti({
+        particleCount: 120,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ['#6a5acd', '#ffb6c1', '#ffffff']
+    });
+
+    const audio = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkle-871.mp3");
+    audio.play().catch(()=>{});
+}
+
+window.onload = createStars;
+</script>
+
+</body>
+</html>
